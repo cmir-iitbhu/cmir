@@ -3,13 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
 		<title>CMIR</title>
 		<script src="./tailwindCSS.js"></script>
 	</head>
 	<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">
 		<header class="h-[13rem] relative bg-[#eeeeee] group text-[#333333] flex flex-col items-center justify-center p-[48px] shadow-inner z-40 md:z-50 transition-all overflow-hidden">
-			
 			<h1 class="text-[30px] md:text-[63px] transition-all duration-300">CMIR-2024</h1>
 			<p class="text-[14px] md:text-[21px] text-center transition-all duration-300">Code-Mixed Information Retrieval</p>
 		</header>
@@ -29,8 +27,7 @@
 					Overview
 				</p>
 				<div id="submenu" class="scale-y-0 md:scale-y-100 absolute top-16 md:top-0 border-2 border-[#078186] md:border-none md:relative shadow-xl md:shadow-none rounded-xl w-full flex flex-col px-[20px] md:py-[16px] gap-2 bg-[#f2f2f2] overflow-hidden transition-all origin-top">
-					<a href="index.html" class="bg-[#078186] text-white cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Overview</a>
-					<a href="call_for_participation.html" class="cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Call for Participation</a>
+					<a href="index.html" class="bg-[#078186] text-white cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Track Overview</a>
 					<a href="registration.html" class="cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Registration</a>
 					<a href="important_dates.html" class="cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Important dates</a>
 					<a href="organizers.html" class="cursor-pointer text-[14px] hover:text-[#078186] w-full hover:bg-[#eeeeee] py-[9px] px-[15px] rounded-lg transition-all duration-300">Organizers</a>
@@ -51,8 +48,35 @@
 				<div class="h-full w-full rounded-xl border border-gray-200 shadow-lg overflow-hidden">
 					<p class="bg-[#f2f2f2] p-[15px] text-xl text-[#078186] font-bold">Overview</p>
 					<p class="p-[15px] font-[16px] text-[#333]">
-						The majority of social media content is informal. Furthermore, while discussing Indian social media, users frequently opt to utilize Roman transliterations of their native languages with English embedding, creating a code-mixed scenario. Code-Mixed Information Retrieval (CMIR) is challenging because queries written in Roman or native scripts must be matched to the documents written in the roman script or roman and native script. However, this study will focus only on Roman transliterated Bengali mixed with English Code-Mixed Facebook data. The Roman transliterated version of a Bengali word has no standards and may have multiple spelling variants. Therefore CMIR must solve a non-trivial term matching solution for searching for matching each Roman transliterated query term with the requested word(s). Therefore Information retrieval (IR) on such Indian social media data is a challenging and complex task when the documents and the queries are a mixture of two or more languages written in either the native scripts or the Roman transliterated form. Aside from these concerns, one of the primary reasons for not studying this topic is the scarcity of datasets. As a result, we built a 50 queries dataset with 150k documents. It required a long time and effort to collect data from Facebook and annotate it to build query relevance files. We explain a corpus collection process, discuss the constraints of current state-of-the-art information retrieval systems on such material, and formulate the problem of Code-Mixed Information Retrieval on informal texts.
+						Code-mixing is the phenomenon where lexical items and grammatical features from two or more languages appear in one sentence. Code-mixing happens all over the world with numerous languages. Online social networking has grown in importance as a means of communication in recent years. A significant number of its users engage in conversation in their native languages but with a foreign script. Many Indians, for example, prefer Roman script while writing on social media platforms. One of the key reasons for this is that people nowadays migrate for jobs and livelihoods from one area to another. (e.g., from one city to another, from one country to another).
 					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						Case in point, in order to communicate with people from the same cultural background, people form many communities on social media. On a day-to-day basis, they raise numerous queries and seek information related to different topics and a myriad of local issues that may not be available on the internet, or they prefer to learn from those who already have some real first-hand experience. For example, if we take one case study from a multilingual country like India, the Bengali people (people from West Bengal) migrate to Delhi, Hyderabad, Bangalore, or other cities of India. They form a local community group on social media sites like Facebook and WhatsApp like ``Bengali in Delhi" or ``Bengali in Bangalore". People raise many queries on diverse topics in these groups. Some of these queries were crucial during the pandemic, viz, individual experiences/anecdotes related to some local civic bodies or facilities that were not available in the news but proved to be very insightful to the citizens. Moreover, federal government guidelines/rules were continuously changing, and each state/province and local administration had its own set of laws and regulations that were constantly changing. People were obliged to return to their hometowns or meet up with their families, needing emergency travels across cities, states, or countries where myriad different COVID-related guidelines were being followed. Confused over the generic news, people were relying more on individual experiences who might have had the similar journey. Most of the conversations here take place through code-mixed text.  
+					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						Users hardly adhere to basic linguistic standards when submitting inquiries in these informal forums, especially while expressing themselves in code-mixed format. Such fully/partially complete sentence(s) are typically written in colloquial languages, which are frequently transliterated. The orthography of these scripts are based on the sound of those words. Moreover, these texts are written in their native language but using a non-native script that does not follow any conventional spelling rule. 
+					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						A user posts on social media seeking information, and other users respond with their recommendations or opinions related to the information required. Most of the time, the post and related comments are not limited to transliteration but also include code-mixed languages. Most of these queries are followed by several comments, ranging from a few to hundreds. It, therefore it becomes difficult to read through all the comments to pin-point the relevant ones, especially when someone other than the original questioner seeks to find answers to similar questions.
+					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						Our attempt is to devise a mechanism so that the most relevant answers can be identified and brought to the forefront based on content analysis of the comments for a given query posed in the social medium.
+					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						Code-Mixed Information Retrieval (CMIR) is challenging because queries written in Roman or native scripts must be matched to the documents written in the roman script or roman and native script. However, this study will focus only on Roman transliterated Bengali mixed with English Code-Mixed Facebook data. The Roman transliterated version of a Bengali word has no standards and may have multiple spelling variants. Therefore CMIR must solve a non-trivial term matching solution for searching for matching each Roman transliterated query term with the requested word(s). Therefore, information retrieval (IR) on Indian social media data is a challenging and complex task when the documents and the queries are a mixture of two or more languages written in either the native scripts or the Roman transliterated form. Aside from these concerns, one of the primary reasons for not studying this topic is the scarcity of datasets.
+					</p>
+					<p class="p-[15px] font-[16px] text-[#333]">
+						As a result, we built a set of queries with a collection of documents. It required a long time and effort to collect data from Facebook and annotate it to build query relevance files (QRels).
+					</p>
+				</div>
+				<div class="h-full w-full rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+					<p class="bg-[#f2f2f2] p-[15px] text-xl text-[#078186] font-bold">Task</p>
+					<div class="px-4 pt-4">
+						<p class="p-[15px] font-[16px] text-[#333]">
+							Track participants will develop retrieval systems that return documents in a specific Bengali-English code-mixed language when given a query in the same code-mixed language. The retrieval process happens at the document level, with queries presented as natural language questions. Documents are considered relevant if they contain answers to these questions. More details about the training and test sets can be found in the Dataset section.
+						</p>
+						<!--<p class="py-[15px] font-[16px] text-[#333] font-bold">Note: Note: baseline model is just to give you a basic idea of our dir. structure and how one can classify context based data, there are no restrictions on any kind of experiments also please note this baseline model is only for task on Identification of Conversational Hate-Speech in Code-Mixed Languages(ICHCL) (Task-1 and Task 2)</p>-->
+					</div>
 				</div>
 			</div>
 		</div>
